@@ -51,7 +51,9 @@
     "audit:resolve": "SHELL=sh resolve-audit",
     "audit:check": "SHELL=sh check-audit",
     "dep:check": "npx ncu -e 2",
-    "dep:update": "npx ncu -u"
+    "dep:update": "npx ncu -u",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@hapi/good": "8.2.4",
@@ -73,7 +75,8 @@
     "mysql": "2.17.1",
     "node-fetch": "2.6.0",
     "parse-strings-in-object": "2.0.0",
-    "rc": "1.2.8"
+    "rc": "1.2.8",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/jest": "^24.0.25",
@@ -92,5 +95,6 @@
   "generator-swaggerize": {
     "version": "4.11.0"
   },
-  "main": "src/server.js"
+  "main": "src/server.js",
+  "snyk": true
 }
